@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spin-off of "Project: Interactive slideshow"(1)</title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+    
+    <br>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Afghan_rice_palaw.JPG/800px-Afghan_rice_palaw.JPG?20131027144641" width="400" alt="Afghan Rice">
+    
+    <button type="button" id="bt">Next </button>
+    <button type="button" id="t">Prev </button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    var i = $("<img>")
+    i.attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Afghan_Qurma.JPG/800px-Afghan_Qurma.JPG?20131027144649")
+    i.attr("width", "400px")
+    var a = $("<img>")
+    a.attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Afghan_cuisine_egg_plant_with_yogurt.JPG/800px-Afghan_cuisine_egg_plant_with_yogurt.JPG?20140630093312")
+    a.attr("width", "400px")
+    
+    $("img").hide();
+    $("img").slideDown();
+    
+   $("#bt").on("click", function(){
+       $("img").hide();
+       i.fadeIn(3000)
+       i.appendTo("body")
+       i.fadeOut(3000)
+       a.fadeIn(3000)
+       a.appendTo("body")
+   
+   });
+   $("#t").on("click", function(){
+      $("img").fadeIn(3000)
+      i.fadeOut(3000)
+   });
+   
+    </script> 
+    
+    </body>
+</html>
